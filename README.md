@@ -1,2 +1,10 @@
-# gadget-set
-A collection of web gadgets. HTML5移动应用开发结课作业
+# 基于移动开发的网页小工具合集
+
+目前正在计划当中。
+
+|组员|开发项目|链接|
+|:---:|:---:|:---:|
+|钟健||[github.com/arect](https://github.com/arect)|
+|张博清|||
+|赵天齐||
+|施运礼||
