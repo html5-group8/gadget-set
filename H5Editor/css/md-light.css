@@ -1,0 +1,136 @@
+/*
+  Name:       material
+  Author:     Mattia Astorino (http://github.com/equinusocio)
+  Website:    https://material-theme.site/
+*/
+
+.cm-s-material.CodeMirror {
+    font-size: 16px;
+    border-radius: 2px;
+    height: 100%;
+    font-family: Consolas, serif;
+    background-color: #F5F5F5; /*编辑区背景颜色*/
+    color: #424242; /*代码颜色*/
+}
+
+.cm-s-material .CodeMirror-gutters {
+    background: #F5F5F5; /*行号背景*/
+    color: #607D8B; /*行号颜色*/
+    border: none;
+}
+
+.cm-s-material .CodeMirror-guttermarker,
+.cm-s-material .CodeMirror-guttermarker-subtle,
+.cm-s-material .CodeMirror-linenumber {
+    color: #607D8B;
+}
+
+.cm-s-material .CodeMirror-cursor {
+    border-left: 2px solid #424242; /*光标颜色*/
+}
+
+.cm-s-material div.CodeMirror-selected {
+    background: rgba(144, 202, 249, 0.4); /*选中代码背景*/
+}
+
+.cm-s-material.CodeMirror-focused div.CodeMirror-selected {
+    background: rgba(144, 202, 249, 0.4); /*选中代码背景*/
+}
+
+.cm-s-material .CodeMirror-line::selection,
+.cm-s-material .CodeMirror-line>span::selection,
+.cm-s-material .CodeMirror-line>span>span::selection {
+    background: rgba(144, 202, 249, 0.4);
+}
+
+.cm-s-material .CodeMirror-line::-moz-selection,
+.cm-s-material .CodeMirror-line>span::-moz-selection,
+.cm-s-material .CodeMirror-line>span>span::-moz-selection {
+    background: rgba(144, 202, 249, 0.4);
+}
+
+.cm-s-material .CodeMirror-activeline-background {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.cm-s-material .cm-keyword {
+    color: #3F51B5; /*保留字*/
+}
+
+.cm-s-material .cm-operator {
+    color: #424242; /*运算符*/
+}
+
+.cm-s-material .cm-variable-2 {
+    color: #9C27B0; /*变量*/
+}
+
+.cm-s-material .cm-variable-3,
+
+.cm-s-material .cm-builtin {
+    color: #FFCB6B;
+}
+
+.cm-s-material .cm-atom {
+    color: #F78C6C;
+}
+
+.cm-s-material .cm-number {
+    color: #03A9F4; /*数字*/
+}
+
+.cm-s-material .cm-def {
+    color: #9C27B0; /*变量声明*/
+}
+
+.cm-s-material .cm-string {
+    color: #4CAF50; /*"字符串"*/
+}
+
+.cm-s-material .cm-string-2 {
+    color: #4CAF50; /*`字符串`*/
+}
+
+.cm-s-material .cm-comment {
+    color: #B0BEC5; /*注释*/
+}
+
+.cm-s-material .cm-variable {
+    color: #424242; /*普通输入*/
+}
+
+.cm-s-material .cm-tag {
+    color: #448AFF; /*标签*/
+}
+
+.cm-s-material .cm-meta {
+    color: #FFCB6B;
+}
+
+.cm-s-material .cm-attribute {
+    color: #2196F3; /*标签的特性*/
+}
+
+.cm-s-material .cm-property {
+    color: #2196F3; /*标签的属性*/
+}
+
+.cm-s-material .cm-qualifier {
+    color: #795548; /*样式名*/
+}
+
+.cm-s-material .cm-variable-3,
+.cm-s-material .cm-type {
+    color: #DECB6B;
+}
+
+
+.cm-s-material .cm-error {
+    color: rgba(255, 255, 255, 1.0);
+    background-color: #FF4081;
+}
+
+.cm-s-material .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
