@@ -1,0 +1,122 @@
+ body{
+            background-image:url("/images/map.jpg");
+            background-repeat: repeat-x;
+        }
+        .dropdown{
+            display: inline-block;
+            height: 50px;
+            border: none;
+            font-size: 16px;
+        }
+        .dropbtn{
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            min-width: 160px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            /* 可以设置好看的影子 */
+        }
+        .dropdown-content a{
+            color:black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #D9D9D9;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        .dropdown:hover .dropbtn,.submit:hover{
+            background-color: #3e8e41;
+        }
+        .content1{
+            width: fit-content;
+            padding: 0px;
+            display: block;
+            position: relative;
+            margin:0px auto;
+            font-size: 16px;
+            height: 50px;
+        }
+        .order-input{
+            margin: 0px;
+            color: #AAAAAA;
+            display: inline;
+            padding: 0px;
+            width: 400px;
+            height: 50px;
+            border: none;
+            background-color: white;
+        }
+        .submit{
+            color: white;
+            padding: 0px;
+            display: inline;
+            height: 50px;
+            min-width: 160px;
+            margin: 0px;
+            border: none;
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+        .finalstate{
+            margin-top: 5px;
+            margin-bottom: 0px;
+            padding: 16px;
+            min-width: 160px;
+            height: 18.4px;
+            font-size: 16px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .circle{
+            width:8px;
+            height:8px;
+            border-radius:50%;
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            display: inline-block;
+        }
+        li{
+            list-style-type: none;
+        }
+        .road{
+            margin-top: 5px;
+            overflow: auto;
+            background-color: rgba(250, 250, 250, 0.5);
+            /* 与opacity不一样，这种做法不会使得容器中的文字也一起变透明 */
+        }
+        #l2{
+            border-color: #4CAF50;
+        }
+        .dest{
+            color: #4CAF50;
+        }
+       
+        .content0{
+            position: relative;
+            color: #4CAF50;
+            font-size: 50px;
+            padding: 0px;
+            text-align: center;
+        }
+        .header{
+            height:50px;
+            width:100%;
+            padding: 0px;
+            border: none;
+            display: block;
+            position:relative;
+        }
