@@ -6,8 +6,10 @@
     <meta charset = "UTF-8">
     <title>快递轨迹查询</title>
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/express.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/express.js"></script>
+    <script src="./js/mdui.js"></script>
+    <link rel="stylesheet" href="./css/mdui.css"/>
     <link rel="stylesheet" href="css/Express_Project.css">
     <script src = "http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script>
@@ -32,47 +34,48 @@
 
     </script>
     </head>
-        <body>
-            <div class = "all">
-                <div class = "content0">
-                    物流轨迹查询
-                </div>
-                <div class = "header">
-                    <div class = "content1">
-                        <div class = "dropdown">
-                            <button class = "dropbtn">下拉菜单</button>
-                            <div class = "dropdown-content">
-                                <a href="#" id = "a1">申通快递</a>
-                                <a href="#" id = "a2">圆通速递</a>
-                                <a href="#" id = "a3">百世快递</a>
-                                <a href="#" id = "a4">天天快递</a>
-                            </div>
-                        </div>
-                        <input class = "order-input" type="text" value = "请输入快递单号">
-                        <button id = "submit_btn" class = "submit">查询</button>
+<body>
+    <div class = "all">
+        <div class = "content0">
+            物流轨迹查询
+        </div>
+        <div class = "header">
+            <div class = "content1">
+                <div class = "dropdown">
+                    <button class = "dropbtn">下拉菜单</button>
+                    <div class = "dropdown-content">
+                        <a href="#" id = "a1">申通快递</a>
+                        <a href="#" id = "a2">圆通速递</a>
+                        <a href="#" id = "a3">百世快递</a>
+                        <a href="#" id = "a4">天天快递</a>
                     </div>
                 </div>
-                <div class = "finalstate">签收成功</div>
-                <div class = "road">
-                    <ul>
-                        <li class = "circle"></li><strong id = "l1s">快递单号：773058709846401 运输商：申通快递</strong><br>
-                        <li class = "circle" id = "l2"></li><strong class = "dest" id = "l2s">2020-10-02 10:01:55</strong><weak class = "dest" id = "l2w" > 已签收，签收人凭取货码签收</weak><br>
-                        <li class = "circle" id = "l3"></li><strong id = "l3s">2020-10-01 11:04:28</strong><weak id = "l3w"> 快件已由辛安渡街道均安制药厂对面五龙御园旁50米申通快递百世邻里代收，请及时取件，如有疑问请联系15926402654</weak><br>
-                        <li class = "circle" id = "l4"></li><strong id = "l4s">2020-10-01 08:25:16</strong><weak id = "l4w"> 【华中地区东山公司】的派件员【戴欧文(13871221131)】正在为您派件，如有疑问请联系派件员，联系电话【13871221131】</weak><br>
-                        <li class = "circle" id = "l5"></li><strong id = "l5s">2020-10-01 08:15:27</strong><weak id = "l5w"> 快件已到达【华中地区东山公司】扫描员是【戴欧文】</weak><br>
-                        <li class = "circle" id = "l6"></li><strong id = "l6s">2020-09-30 21:39:31</strong><weak id = "l6w"> 快件由【华中地区转运中心】发往【华中地区东山公司】</weak><br>
-                        <li class = "circle" id = "l7"></li><strong id = "l7s">2020-09-30 21:33:20</strong><weak id = "l7w"> 快件由【华中地区转运中心】发往【华中地区东山公司】</weak><br>
-                        <li class = "circle" id = "l8"></li><strong id = "l8s">2020-09-30 21:30:02</strong><weak id = "l8w"> 快件已到达【华中地区转运中心】扫描员是【市内晚班谢六安】</weak><br>
-                        <li class = "circle" id = "l9"></li><strong id = "l9s">2020-09-30 20:54:06</strong><weak id = "l9w"> 快件已到达【华中地区转运中心】扫描员是【二号库卸货6】</weak><br>
-                        <li class = "circle" id = "l10"></li><strong id = "l10s">2020-09-30 02:01:23</strong><weak id = "l10w"> 快件由【北京转运中心】发往【华中地区转运中心】</weak><br>
-                        <li class = "circle" id = "l11"></li><strong id = "l11s">2020-09-30 01:55:57</strong><weak id = "l11w"> 快件已到达【北京转运中心】扫描员是【出港三合一卸车扫描14】</weak><br>
-                        <li class = "circle" id = "l12"></li><strong id = "l12s">2020-09-29 23:08:00</strong><weak id = "l12w"> 快件由【北京顺义转运中心】发往【北京转运中心】</weak><br>
-                        <li class = "circle" id = "l13"></li><strong id = "l13s">2020-09-29 22:53:43</strong><weak id = "l13w"> 快件已到达【北京顺义转运中心】扫描员是【祥龙自动化二期】</weak><br>
-                        <li class = "circle" id = "l14"></li><strong id = "l14s">2020-09-29 17:49:04</strong><weak id = "l14w"> 快件由【北京永丰分公司】发往【北京顺义转运中心】</weak><br>
-                        <li class = "circle" id = "l15"></li><strong id = "l15s">2020-09-29 17:49:03</strong><weak id = "l15w"> 【北京永丰分公司】的收件员【KH永旺(13718118641)】已收件</weak><br>
-                        <li class = "circle" id = "l16"></li><strong id = "l16s">2020-09-29 17:28:37</strong><weak id = "l16w"> 【北京(13718118641)永丰分公司】已收件，扫描员【G谢鑫强】</weak><br>
-                    </ul>
-                </div>
+                <input class = "order-input" type="text" value = "请输入快递单号">
+                <button id = "submit_btn" class = "submit">查询</button>
             </div>
-        </body>
+        </div>
+        <div class = "finalstate">签收成功</div>
+        <div class = "road">
+            <ul>
+                <li class = "circle"></li>
+                <strong id = "l1s">快递单号：773058709846401 运输商：申通快递</strong><br />
+                <li class = "circle" id = "l2"></li><strong class = "dest" id = "l2s">2020-10-02 10:01:55</strong><weak class = "dest" id = "l2w" > 已签收，签收人凭取货码签收</weak><br>
+                <li class = "circle" id = "l3"></li><strong id = "l3s">2020-10-01 11:04:28</strong><weak id = "l3w"> 快件已由辛安渡街道均安制药厂对面五龙御园旁50米申通快递百世邻里代收，请及时取件，如有疑问请联系15926402654</weak>
+                <li class = "circle" id = "l4"></li><strong id = "l4s">2020-10-01 08:25:16</strong><weak id = "l4w"> 【华中地区东山公司】的派件员【戴欧文(13871221131)】正在为您派件，如有疑问请联系派件员，联系电话【13871221131】</weak>
+                <li class = "circle" id = "l5"></li><strong id = "l5s">2020-10-01 08:15:27</strong><weak id = "l5w"> 快件已到达【华中地区东山公司】扫描员是【戴欧文】</weak>
+                <li class = "circle" id = "l6"></li><strong id = "l6s">2020-09-30 21:39:31</strong><weak id = "l6w"> 快件由【华中地区转运中心】发往【华中地区东山公司】</weak>
+                <li class = "circle" id = "l7"></li><strong id = "l7s">2020-09-30 21:33:20</strong><weak id = "l7w"> 快件由【华中地区转运中心】发往【华中地区东山公司】</weak>
+                <li class = "circle" id = "l8"></li><strong id = "l8s">2020-09-30 21:30:02</strong><weak id = "l8w"> 快件已到达【华中地区转运中心】扫描员是【市内晚班谢六安】</weak>
+                <li class = "circle" id = "l9"></li><strong id = "l9s">2020-09-30 20:54:06</strong><weak id = "l9w"> 快件已到达【华中地区转运中心】扫描员是【二号库卸货6】</weak>
+                <li class = "circle" id = "l10"></li><strong id = "l10s">2020-09-30 02:01:23</strong><weak id = "l10w"> 快件由【北京转运中心】发往【华中地区转运中心】</weak>
+                <li class = "circle" id = "l11"></li><strong id = "l11s">2020-09-30 01:55:57</strong><weak id = "l11w"> 快件已到达【北京转运中心】扫描员是【出港三合一卸车扫描14】</weak>
+                <li class = "circle" id = "l12"></li><strong id = "l12s">2020-09-29 23:08:00</strong><weak id = "l12w"> 快件由【北京顺义转运中心】发往【北京转运中心】</weak>
+                <li class = "circle" id = "l13"></li><strong id = "l13s">2020-09-29 22:53:43</strong><weak id = "l13w"> 快件已到达【北京顺义转运中心】扫描员是【祥龙自动化二期】</weak>
+                <li class = "circle" id = "l14"></li><strong id = "l14s">2020-09-29 17:49:04</strong><weak id = "l14w"> 快件由【北京永丰分公司】发往【北京顺义转运中心】</weak>
+                <li class = "circle" id = "l15"></li><strong id = "l15s">2020-09-29 17:49:03</strong><weak id = "l15w"> 【北京永丰分公司】的收件员【KH永旺(13718118641)】已收件</weak>
+                <li class = "circle" id = "l16"></li><strong id = "l16s">2020-09-29 17:28:37</strong><weak id = "l16w"> 【北京(13718118641)永丰分公司】已收件，扫描员【G谢鑫强】</weak>
+            </ul>
+        </div>
+    </div>
+</body>
 </html>
