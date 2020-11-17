@@ -22,13 +22,13 @@ body{
 }
 .form_group{
     border-radius:30px;
-    width:640px;
+    width:700px;
     height:60px;
     margin-top:45px;
 }
 .input_txt{
     border-radius:30px;
-    width:530px;
+    width:540px;
     height:50px;
     padding-left: 16px;
     float:left;
