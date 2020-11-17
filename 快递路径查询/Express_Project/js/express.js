@@ -1,11 +1,9 @@
-
 var express = express || {};
 express.main = {
     SumitBtn: function () {
         //1.判断快递公司是否正确选择 
         //2.判断快递单号是否填写
-        var choice = $(".dropbtn").text();
-        console.log(choice);
+        var choice = $(".mdui-select-selected").text();
         var companyCode = " ";
         var pre_content1 = "快递单号：";
         var pre_content2 = " 运输商：";
@@ -26,10 +24,10 @@ express.main = {
                 alert("输入错误！");
                 break;
         }
-        var expressNumber = $(".order-input").val();
-        console.log(expressNumber);
-        if(expressNumber == ""){
+        var expressNumber = $(".mdui-textfield-input").val();
+        if(expressNumber === ""){
             alert("你什么都不填让我怎么查！");
+            return;
         }
         commmon.ajax(
             "GET",
@@ -58,29 +56,17 @@ express.main = {
                         break;
                 }
                 $("#l1s").text(pre_content1 + json.LogisticCode + pre_content2 + company);
-                var l = "l";
-                var s = "s";
-                var w = "w";
-                var j = 2;
                 var state = json.State;
                 alert(state);
-                if(state != "0"){
+                if(state !== "0"){
                     alert(json.Traces[0].AcceptTime);
+                    document.getElementById("timeline").innerHTML = "";
                     for(var i = json.Traces.length - 1;i >= 0; --i){
-                        $("#"+l+j+s).text(json.Traces[i].AcceptTime);
-                        $("#"+l+j+w).text(json.Traces[i].AcceptStation);
-                        ++j;
+                        document.getElementById("timeline").innerHTML += "<li class=\"mdui-list-item mdui-ripple\"><i class=\"mdui-list-item-icon mdui-icon material-icons\">access_time</i>" + json.Traces[i].AcceptTime;
+                        document.getElementById("timeline").innerHTML += "&emsp;<i class=\"mdui-list-item-icon mdui-icon material-icons\">assignment</i>" + json.Traces[i].AcceptStation + " </li>";
                     }
                 }
-                $("#dest").css("display","none");
-                for(var k = json.Traces.length + 1;k <= 16; ++k){
-                    if(k > 1){
-                    $("#"+l+k+w).css("display","none");
-                    $("#"+l+k+s).css("display","none");
-                    $("#"+l+k).css("display","none");
-                    }
-                }
-                $("#"+l+1+s).text("暂无轨迹信息");
+                document.getElementById("timeline").innerHTML = "<li class=\"mdui-list-item mdui-ripple\"><i class=\"mdui-list-item-icon mdui-icon material-icons\">block</i>暂时没有物流消息</li>";
             }
         )
     }
