@@ -1,7 +1,3 @@
- body{
-            background-image:url("/images/map.jpg");
-            background-repeat: repeat-x;
-        }
         .dropdown{
             display: inline-block;
             height: 50px;

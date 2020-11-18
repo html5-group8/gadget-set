@@ -8,7 +8,7 @@ body{
     /* background: radial-gradient(#f3fbfe, #e4f5fd, #8fd5f4); */
     /* background:#8fd5f4; */
     /* background: linear-gradient(#6bc6ee, #fff); */
-    background:#fff;
+    /*background:#fff;*/
 
 }
 .search_form{
@@ -22,19 +22,19 @@ body{
 }
 .form_group{
     border-radius:30px;
-    width:640px;
+    width:700px;
     height:60px;
     margin-top:45px;
 }
 .input_txt{
     border-radius:30px;
-   width:530px;
-   height:50px;
-   padding:0px;
-   float:left;
-   border:none;
-   outline:none;
-   text-indent:10px;
+    width:540px;
+    height:50px;
+    padding-left: 16px;
+    float:left;
+    border:none;
+    outline:none;
+    text-indent:10px;
 }
 
 .input_sub{

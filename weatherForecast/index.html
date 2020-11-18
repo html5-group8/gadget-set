@@ -17,18 +17,82 @@
 
 </head>
 
-<body>
-<div class="mdui-appbar-with-toolbar mdui-appbar-with-tab">
-  <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
-    <div class="mdui.mutation() mdui-toolbar">
-    <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-    <a href="javascript:;" class="mdui-typo-headline">天气知道</a>
-    <!--<a href="javascript:;" class="mdui-typo-title">Title</a>-->
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-blue" id="body">
+<div class="mdui-drawer" id="drawer">
+  <ul class="mdui-list">
+    <a href="../H5Editor/index.html">
+      <li class="mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-avatar"><img src="./src/kano.jpg" alt="钟健"/></div>
+        <div class="mdui-list-item-content">
+          <div class="mdui-list-item-title">钟健</div>
+          <div class="mdui-list-item-text mdui-list-item-one-line">
+            HTML5编辑器
+          </div>
+        </div>
+      </li>
+    </a>
+    <a href="#">
+      <li class="mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-avatar"><img src="./src/zbq.jpg" alt="张博清"/></div>
+        <div class="mdui-list-item-content">
+          <div class="mdui-list-item-title">张博清</div>
+          <div class="mdui-list-item-text mdui-list-item-one-line">
+            天气知道
+          </div>
+        </div>
+      </li>
+    </a>
+    <a href="https://www.kanofans.com/download/">
+      <li class="mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-avatar"><img src="./src/ztq.jpg" alt="赵天齐"/></div>
+        <div class="mdui-list-item-content">
+          <div class="mdui-list-item-title">赵天齐</div>
+          <div class="mdui-list-item-text mdui-list-item-one-line">
+            服务器下载
+          </div>
+        </div>
+      </li>
+    </a>
+    <a href="../快递路径查询/Express_Project/Express_Project.html">
+      <li class="mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-avatar"><img src="./src/syl.jpg" alt="施运礼"/></div>
+        <div class="mdui-list-item-content">
+          <div class="mdui-list-item-title">施运礼</div>
+          <div class="mdui-list-item-text mdui-list-item-one-line">
+            物流轨迹查询
+          </div>
+        </div>
+      </li>
+    </a>
+  </ul>
+</div>
+<div class="mdui-appbar mdui-appbar-fixed">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a class="mdui-btn mdui-btn-icon" v-on:click="toggle()" id="menu"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="javascript:" class="mdui-typo-title">天气知道</a>
     <div class="mdui-toolbar-spacer"></div>
-    </div>
+    <a href="javascript:location.reload(true);" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+    <button class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">more_vert</i></button>
+    <ul class="mdui-menu mdui-menu-cascade" id="demo-attr-cascade">
+      <li class="mdui-menu-item">
+        <a href="javascript:" class="mdui-ripple">
+          颜色主题
+          <span class="mdui-menu-item-more"></span>
+        </a>
+        <ul class="mdui-menu mdui-menu-cascade" id="colorThemeItems">
+          <li class="mdui-menu-item" v-for="i of item">
+            <a v-on:click="setTheme(i.value)" class="mdui-ripple">
+              <i class="mdui-menu-item-icon mdui-icon material-icons" v-if="i.now === true">check_circle</i>
+              <i class="mdui-menu-item-icon mdui-icon material-icons" v-else>radio_button_unchecked</i>
+              {{ i.name }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>
-  <div class="wrap" id="app">
+<div class="wrap" id="app">
     <div class="search_form">
       <div class="logo"><img src="img/logo.png" alt="logo" /></div>
       <div class="form_group">
@@ -97,6 +161,52 @@
           integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
           crossorigin="anonymous"
   ></script>
-</body>
 
+</body>
+<script>
+  let express_menu = new Vue({
+    el: "#menu",
+    methods: {
+      toggle: function () {
+        let inst = new mdui.Drawer('#drawer');
+        inst.toggle();
+      }
+    }
+  });
+  let colorThemeItems = new Vue({
+    el: "#colorThemeItems",
+    data: {
+      item: [
+        {name: "蓝色", value: "mdui-theme-primary-blue", now: true},
+        {name: "红色", value: "mdui-theme-primary-red", now: false},
+        {name: "绿色", value: "mdui-theme-primary-green", now: false},
+        {name: "白色", value: "mdui-theme-primary-white", now: false},
+        {name: "夜间模式", value: "mdui-theme-layout-dark", now: false},
+      ],
+    },
+    methods: {
+      setTheme: function (color) {
+        let classes = document.getElementsByTagName("body").body.className.split(" ");
+        for (let i = 0; i < classes.length; i++) {
+          if (classes[i].substr(0, 18) === "mdui-theme-primary" || classes[i].substr(0, 22) === "mdui-theme-layout-dark") {
+            for (let ii of this.item) {
+              if (ii.value === classes[i]) {
+                ii.now = false;
+              }
+              else if (ii.value === color) {
+                ii.now = true;
+              }
+            }
+            classes[i] = color;
+            break;
+          }
+        }
+        document.getElementsByTagName("body").body.className = "";
+        for (let i of classes) {
+          document.getElementsByTagName("body").body.className += i + " ";
+        }
+      },
+    }
+  });
+</script>
 </html>
