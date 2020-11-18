@@ -35,9 +35,9 @@ express.main = {
             function (result) {
                 //拿到物流数据
                 console.log(result.text);
-                alert(result.result);
+                // alert(result.result);
                 var json = eval("("+result.result+")");
-                alert(json.LogisticCode);
+                // alert(json.LogisticCode);
                 var company = " ";
                 switch(companyCode){
                     case "YTO":
@@ -57,16 +57,16 @@ express.main = {
                 }
                 $("#l1s").text(pre_content1 + json.LogisticCode + pre_content2 + company);
                 var state = json.State;
-                alert(state);
+                // alert(state);
                 if(state !== "0"){
-                    alert(json.Traces[0].AcceptTime);
+                    // alert(json.Traces[0].AcceptTime);
                     document.getElementById("timeline").innerHTML = "";
                     for(var i = json.Traces.length - 1;i >= 0; --i){
                         document.getElementById("timeline").innerHTML += "<li class=\"mdui-list-item mdui-ripple\"><i class=\"mdui-list-item-icon mdui-icon material-icons\">access_time</i>" + json.Traces[i].AcceptTime;
                         document.getElementById("timeline").innerHTML += "&emsp;<i class=\"mdui-list-item-icon mdui-icon material-icons\">assignment</i>" + json.Traces[i].AcceptStation + " </li>";
                     }
                 }
-                document.getElementById("timeline").innerHTML = "<li class=\"mdui-list-item mdui-ripple\"><i class=\"mdui-list-item-icon mdui-icon material-icons\">block</i>暂时没有物流消息</li>";
+                else document.getElementById("timeline").innerHTML = "<li class=\"mdui-list-item mdui-ripple\"><i class=\"mdui-list-item-icon mdui-icon material-icons\">block</i>暂时没有物流消息</li>";
             }
         )
     }
