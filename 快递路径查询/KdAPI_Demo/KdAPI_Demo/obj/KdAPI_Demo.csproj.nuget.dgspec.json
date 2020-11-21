@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\KdAPI_Demo\\KdAPI_Demo\\KdAPI_Demo.csproj": {}
+    "C:\\Users\\inspi\\Desktop\\快递查询\\KdAPI_Demo\\KdAPI_Demo\\KdAPI_Demo.csproj": {}
   },
   "projects": {
-    "C:\\KdAPI_Demo\\KdAPI_Demo\\KdAPI_Demo.csproj": {
+    "C:\\Users\\inspi\\Desktop\\快递查询\\KdAPI_Demo\\KdAPI_Demo\\KdAPI_Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\KdAPI_Demo\\KdAPI_Demo\\KdAPI_Demo.csproj",
+        "projectUniqueName": "C:\\Users\\inspi\\Desktop\\快递查询\\KdAPI_Demo\\KdAPI_Demo\\KdAPI_Demo.csproj",
         "projectName": "KdAPI_Demo",
-        "projectPath": "C:\\KdAPI_Demo\\KdAPI_Demo\\KdAPI_Demo.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\KdAPI_Demo\\KdAPI_Demo\\obj\\",
+        "projectPath": "C:\\Users\\inspi\\Desktop\\快递查询\\KdAPI_Demo\\KdAPI_Demo\\KdAPI_Demo.csproj",
+        "packagesPath": "C:\\Users\\inspi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\inspi\\Desktop\\快递查询\\KdAPI_Demo\\KdAPI_Demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\inspi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -81,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
