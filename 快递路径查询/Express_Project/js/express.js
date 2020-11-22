@@ -34,7 +34,7 @@ express.main = {
             "http://localhost:5000/api/Query/Immediately?expressNumber=" + expressNumber + "&expressCode=" + companyCode + "&sfNumber="+'1', {},
             function (result) {
                 //拿到物流数据
-                console.log(result.text);
+                // console.log(result.text);
                 // alert(result.result);
                 var json = eval("("+result.result+")");
                 // alert(json.LogisticCode);
